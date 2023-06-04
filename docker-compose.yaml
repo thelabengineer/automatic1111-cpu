@@ -1,0 +1,31 @@
+version: "3.9"
+services:
+  sd:
+    user: "${UID}:${GID}" # default user within container
+    image: local/automatic1111cpu:latest
+    container_name: automatic1111cpu
+    volumes:
+      - type: bind
+        source: "./outputs"
+        target: "/outputs"
+      - type: bind
+        source: "./models"
+        target: "/models"
+      - type: bind
+        source: "./loras"
+        target: "/loras"
+      - type: bind
+        source: "./embeddings"
+        target: "/embeddings"
+      - type: bind
+        source: "./lycoris"
+        target: "/lycoris"
+      - type: bind
+        source: "./repositories"
+        target: "/app/stable-diffusion-webui/repositories"
+    ports:
+      - 7860:7860 # Host:Container
+    command: /app/run-webgui.sh
+    # command: bash --login
+    # stdin_open: true
+    # tty: true

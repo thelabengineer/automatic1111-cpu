@@ -1,0 +1,13 @@
+**/embeddings/*.safetensors*
+**/loras/*.safetensors*
+**/lycoris/*.safetensors*
+**/models/*.ckpt*
+**/models/*.safetensors*
+**/outputs/*-grids
+**/outputs/*-images
+**/prompts
+**/repositories/BLIP
+**/repositories/CodeFormer
+**/repositories/k-diffusion
+**/repositories/stable-diffusion-stability-ai
+**/repositories/taming-transformers
