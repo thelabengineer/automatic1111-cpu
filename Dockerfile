@@ -4,10 +4,10 @@ FROM ubuntu:jammy
 ## ARGS
 
 # SD
-ARG SDVER=v1.3.1
+ARG SDVER=v1.4.0
 
 # install packages
-ARG PACKAGES="git libgl1-mesa-glx pciutils"
+ARG PACKAGES="git libglib2.0-0 libgl1-mesa-glx pciutils"
 
 # miniconda
 ARG CONDASETUP=Miniconda3-py310_23.3.1-0-Linux-x86_64.sh
